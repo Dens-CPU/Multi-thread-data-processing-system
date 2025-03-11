@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
 )
 
 //Структура товара
@@ -77,6 +78,8 @@ func (c *Catalog) AddToCatalog() {
 	}
 }
 
+// УДАЛЕНИЕ РАЗДЕЛОВ КАТАЛОГА
+
 //Добавление продуктов в каталог
 
 func (c *Catalog) AddProduct() {
@@ -113,7 +116,8 @@ func (c *Catalog) AddProduct() {
 		for {
 			fmt.Print("Товар:")
 			nameproduct, _ := bufio.NewReader(os.Stdin).ReadString('\n')
-			if string(nameproduct) == "q" {
+			nameproduct = strings.TrimSpace(nameproduct)
+			if (nameproduct) == "q" {
 				break AddProduct
 			}
 			fmt.Print("Цена:")
@@ -142,6 +146,10 @@ func (c Catalog) ViewCatalog() {
 	}
 
 }
+
+//СДЕЛАТЬ СДЕЛАТЬ ВЫВОД ТОВАРОВ ОПРЕДЕЛЕННОГО КАТАЛОГА
+
+// УДАЛЕНИЕ ПРОДУКТА ИЗ КАТАЛОГА
 
 // Функция проверки на наличие элемента в массиве
 func Checking(catalogs []*Chapter, chapter Chapter) bool {

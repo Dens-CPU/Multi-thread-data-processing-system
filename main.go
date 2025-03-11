@@ -11,9 +11,10 @@ import (
 */
 func main() {
 	catalog := productsearch.MakeCatalog()
-
+	// СОЗДАНИЕ ФУНКЦИОНЛА АДМИНА
 	catalog.AddToCatalog()
 	catalog.AddProduct()
 	catalog.ViewCatalog()
-
+	// СОЗДАНИЕ ФУНКЦИОНЛА ПРОДАВЦА
+	// СОЗДАНИЕ ФУНКЦИОНЛА ПОКУПАТЕЛЯ
 }
